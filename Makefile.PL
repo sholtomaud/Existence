@@ -3,8 +3,8 @@ use strict;
 use warnings FATAL => 'all';
 use inc::Module::Install;
 
-name     'Logger';
-all_from 'lib/Logger.pm';
+name     'Existence';
+all_from 'lib/Existence.pm';
 author   q{Sholto Maud <sholto.maud@gmail.com>};
 license  'artistic2';
 
@@ -14,10 +14,10 @@ tests_recursive('t');
 
 resources (
    #homepage   => 'http://yourwebsitehere.com',
-   #IRC        => 'irc://irc.perl.org/#Logger',
+   #IRC        => 'irc://irc.perl.org/#Existence',
    license    => 'http://www.perlfoundation.org/artistic_license_2_0',
-   #repository => 'git://github.com/Sholto Maud/Logger.git',
-   bugtracker => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Logger',
+   repository => 'https://github.com/shotlom/Existence',
+   #bugtracker => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Existence',
 );
 
 configure_requires (

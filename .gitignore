@@ -19,7 +19,5 @@ Logger-*.tar.gz
 gitignore
 t/*
 Changes
-Makefile.PL
-MANIFEST
 META.yml
-README.pod
+
