@@ -1,4 +1,3 @@
-use 5.006;
 use strict;
 use warnings FATAL => 'all';
 use inc::Module::Install;
@@ -7,10 +6,6 @@ name     'Existence';
 all_from 'lib/Existence.pm';
 author   q{Sholto Maud <sholto.maud@gmail.com>};
 license  'artistic2';
-
-perl_version 5.006;
-
-tests_recursive('t');
 
 resources (
    #homepage   => 'http://yourwebsitehere.com',
