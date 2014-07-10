@@ -28,7 +28,7 @@ Use this module to check existence of a Baseline Assessment
      
 =cut 
 
-    sub baseline_exists{
+  sub baseline_exists{
     my $self = shift;
     %{$self{table_name}} = 'areasmt';
     %{$self{return_type}} = 'array';

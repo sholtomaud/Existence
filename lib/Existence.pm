@@ -34,33 +34,8 @@ Use this module to check existence of records
 has 'table_name'  => ( is => 'rw', isa => 'Str'); 
 has 'sitelist_filter'  => ( is => 'rw', isa => 'Str'); 
 has 'company_name'  => ( is => 'rw', isa => 'Str'); 
-
-  sub baseline_exists{
-    my $c = shift;
-    my $site = shift;
-    my %params;
-    $params{table_name} = 'areasmt';
-    $params{return_type} = 'array';
-    $params{sitelist_filter} = $site;
-    my $dllp = HydDllp->New();
-    my @d = $dllp->get_db_info(
-      { 'function' => 'get_db_info',
-        'version'  => 3,
-        'params'   => \%params
-      },
-      $DEFBUFFER
-    );
-    $dllp->Close();
-    #Prt( '-P', NowStr() . "   - return\n".HashDump(\%hydtables)."]\n" );
-    #print Dumper(\%d);
-    if ( defined $d[0] ){
-      return 1; 
-    }
-    else {
-      return 0;
-    }
-  }
   
+=skip
   sub table_keys{
     my $c = shift;
     my $table = shift;
@@ -109,7 +84,7 @@ has 'company_name'  => ( is => 'rw', isa => 'Str');
     return %return_data;
     #return %d;
   }
-  
+=cut  
  
 =cut  
   sub key_exists{
@@ -232,5 +207,5 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 =cut
-
+}
 1; # End of Existence

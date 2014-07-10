@@ -22,6 +22,8 @@ Version 0.01
 
 =cut
 
+has '+sitelist_filter'  => ( is => 'rw', isa => 'Str', required => 1); 
+
 =head1 SYNOPSIS
 
 Use this module to check existence of SITE records
@@ -31,8 +33,8 @@ Use this module to check existence of SITE records
   sub site_exists {
     #called with site_exists( sitelist_filter => $site)
     my $self = shift;
-    %{$self{table_name}} = 'site';
-    %{$self{return_type}} = 'array';
+    $$self{table_name} = 'site';
+    $$self{return_type} = 'array';
     
     my $dllp = HydDllp->New();
     my @d = $dllp->get_db_info(
